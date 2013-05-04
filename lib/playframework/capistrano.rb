@@ -1,4 +1,4 @@
-require "playframework/capistrano/version"
+# Recipes for using PlayFramework on a server with capistrano.
 
 module Capistrano
   Configuration.instance(true).load do
