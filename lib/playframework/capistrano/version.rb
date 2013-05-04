@@ -1,5 +1,5 @@
 module Playframework
-  module Capistrano
-    VERSION = "0.0.1"
+  class Capistrano
+    VERSION = "0.0.2"
   end
 end
