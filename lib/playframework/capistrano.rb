@@ -44,7 +44,7 @@ module Capistrano
         depend :remote, deploy_to
         targets = find_servers_for_task(current_task)
         failed_targets = targets.map do |target|
-          cmd = "ssh #{user}@#{target.host} 'cd #{deploy_to} && ./stop.sh'"
+          cmd = "ssh -p #{port} #{user}@#{target.host} 'cd #{deploy_to} && ./stop.sh'"
           target.host unless system cmd
         end.compact
         raise "Stopping #{application} failed on #{failed_targets.join(',')}" if failed_targets.any?
@@ -53,7 +53,7 @@ module Capistrano
       task :start_prod do
         targets = find_servers_for_task(current_task)
         failed_targets = targets.map do |target|
-          cmd = "ssh #{user}@#{target.host} 'cd #{deploy_to} && ./start.sh -Dconfig.resource=#{prod_conf}'"
+          cmd = "ssh -p #{port} #{user}@#{target.host} 'cd #{deploy_to} && ./start.sh -Dconfig.resource=#{prod_conf}'"
           target.host unless system cmd
         end.compact
         raise "Starting #{application} failed on #{failed_targets.join(',')}" if failed_targets.any?
@@ -62,7 +62,7 @@ module Capistrano
       task :start_dev do
         targets = find_servers_for_task(current_task)
         failed_targets = targets.map do |target|
-          cmd = "ssh #{user}@#{target.host} 'cd #{deploy_to} && ./start.sh'"
+          cmd = "ssh -p #{port} #{user}@#{target.host} 'cd #{deploy_to} && ./start.sh'"
           target.host unless system cmd
         end.compact
         raise "Starting #{application} failed on #{failed_targets.join(',')}" if failed_targets.any?
