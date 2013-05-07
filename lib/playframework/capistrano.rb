@@ -71,5 +71,5 @@ module Capistrano
       end
     end
 
-  end if Capistrano.const_defined? :Configuration and Capistrano::Configuration.methods.map(&:to_sym).include? :instance
-end # end module Capistrano
+  end
+end
