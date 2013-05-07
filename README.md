@@ -14,7 +14,7 @@ And then execute:
 
 ## Usage
 
-Configure your project:
+Configure your project ([sample project](https://github.com/tomasmuller/playframework-neo4j-template)):
 - [Capfile](https://github.com/tomasmuller/playframework-neo4j-template/blob/master/Capfile) 
 - [conf/deploy.rb](https://github.com/tomasmuller/playframework-neo4j-template/blob/master/conf/deploy.rb)
 
