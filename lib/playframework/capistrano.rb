@@ -23,8 +23,8 @@ module Capistrano
 
     namespace :playframework do
       task :setup do
-        put "#!/bin/bash\nnohup bash -c \"cd #{current_path} && target/start $* &>> #{current_path}/log/#{application}.log 2>&1\" &> /dev/null &", "#{current_path}/start.sh", :mode => '755', :via => :scp
-        put "#!/bin/bash\npid=`cat RUNNING_PID 2> /dev/null`\nif [ \"$pid\" == \"\" ]; then echo '#{application} is not running'; exit 0; fi\necho 'Stopping #{application}...'\nkill -SIGTERM $pid", "#{current_path}/stop.sh", :mode => '755', :via => :scp
+        put "#!/bin/bash\nnohup bash -c \"cd #{current_path} && mkdir -p log && target/universal/stage/bin/#{application.downcase} $* &>> #{current_path}/log/#{application}.log 2>&1\" &> /dev/null &", "#{current_path}/start.sh", :mode => '755', :via => :scp
+        put "#!/bin/bash\npid=`cat #{current_path}/target/universal/stage/RUNNING_PID 2> /dev/null`\nif [ \"$pid\" == \"\" ]; then echo '#{application} is not running'; exit 0; fi\necho 'Stopping #{application}...'\nkill -SIGTERM $pid", "#{current_path}/stop.sh", :mode => '755', :via => :scp
         put "#!/bin/bash\nexport", "#{current_path}/envvars.sh", :mode => '755', :via => :scp
       end
 
