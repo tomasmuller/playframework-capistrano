@@ -2,11 +2,21 @@
 
 PlayFramework / Capistrano Integration Gem.
 
+## Important
+
+Use the branch `master` if you are developing with PlayFramework >= 2.2.0.
+
+If you are stuck in previous versions of PlayFramework, go to `playframework-2.1.x-compatible` branch.
+
 ## Installation
 
 PlayFramework / Capistrano integration is available as a separate gem. Add this line to your application's [Gemfile](https://github.com/tomasmuller/playframework-neo4j-template/blob/master/Gemfile):
 
     gem 'playframework-capistrano'
+
+or
+
+    gem 'playframework-capistrano', '0.0.5' # for PlayFramework < 2.2.0
 
 And then execute:
 
@@ -15,7 +25,7 @@ And then execute:
 ## Usage
 
 Configure your project ([sample project](https://github.com/tomasmuller/playframework-neo4j-template)):
-- [Capfile](https://github.com/tomasmuller/playframework-neo4j-template/blob/master/Capfile) 
+- [Capfile](https://github.com/tomasmuller/playframework-neo4j-template/blob/master/Capfile)
 - [conf/deploy.rb](https://github.com/tomasmuller/playframework-neo4j-template/blob/master/conf/deploy.rb)
 
 Run `cap -vT` to see all the available tasks.
