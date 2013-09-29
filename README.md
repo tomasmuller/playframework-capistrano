@@ -1,8 +1,8 @@
-# Playframework::Capistrano
+# Playframework Capistrano
 
 PlayFramework / Capistrano Integration Gem.
 
-## Important
+## Compatibility
 
 Use the branch `master` if you are developing with PlayFramework >= 2.2.0.
 
@@ -10,17 +10,25 @@ If you are stuck in previous versions of PlayFramework, go to `playframework-2.1
 
 ## Installation
 
-PlayFramework / Capistrano integration is available as a separate gem. Add this line to your application's [Gemfile](https://github.com/tomasmuller/playframework-neo4j-template/blob/master/Gemfile):
+PlayFramework / Capistrano integration is available as a separate gem.
 
+    $ gem install rvm-capistrano
+
+Or, in your PlayFramework's project root folder, create a `Gemfile` file ([example here](https://github.com/tomasmuller/playframework-neo4j-template/blob/master/Gemfile)), and add:
+
+    #
+    # For PlayFramework >= 2.2.0:
+    #
     gem 'playframework-capistrano'
 
-or
-
-    gem 'playframework-capistrano', '0.0.5' # for PlayFramework < 2.2.0
+    #
+    # For PlayFramework < 2.2.0:
+    #
+    # gem 'playframework-capistrano', '0.0.5'
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 ## Usage
 
