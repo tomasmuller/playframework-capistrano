@@ -19,7 +19,7 @@ Or, in your PlayFramework's project root folder, create a `Gemfile` file ([examp
     #
     # For PlayFramework >= 2.2.0:
     #
-    gem 'playframework-capistrano'
+    gem 'playframework-capistrano', '>=0.0.6'
 
     #
     # For PlayFramework < 2.2.0:
