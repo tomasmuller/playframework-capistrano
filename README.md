@@ -12,7 +12,7 @@ If you are stuck in previous versions of PlayFramework, go to `playframework-2.1
 
 PlayFramework / Capistrano integration is available as a separate gem.
 
-    $ gem install rvm-capistrano
+    $ gem install playframework-capistrano
 
 Or, in your PlayFramework's project root folder, create a `Gemfile` file ([example here](https://github.com/tomasmuller/playframework-neo4j-template/blob/master/Gemfile)), and add:
 
