@@ -1,28 +1,28 @@
-# Playframework Capistrano
+# Playframework::Capistrano
 
-PlayFramework / Capistrano Integration Gem.
+Play Framework / Capistrano Integration Gem.
 
 ## Compatibility
 
-Use the branch `master` if you are developing with PlayFramework >= 2.2.0.
+Use the branch `master` if you are developing with Play Framework >= 2.2.0.
 
-If you are stuck in previous versions of PlayFramework, go to `playframework-2.1.x-compatible` branch.
+If you are stuck in previous versions of Play Framework, go to `playframework-2.1.x-compatible` branch.
 
 ## Installation
 
-PlayFramework / Capistrano integration is available as a separate gem.
+Play Framework / Capistrano integration is available as a separate gem.
 
     $ gem install playframework-capistrano
 
-Or, in your PlayFramework's project root folder, create a `Gemfile` file ([example here](https://github.com/tomasmuller/playframework-neo4j-template/blob/master/Gemfile)), and add:
+Or, in your Play Framework's project root folder, create a `Gemfile` file ([example here](https://github.com/tomasmuller/playframework-neo4j-template/blob/master/Gemfile)), and add:
 
     #
-    # For PlayFramework >= 2.2.0:
+    # For Play Framework >= 2.2.0:
     #
     gem 'playframework-capistrano', '>=0.0.6'
 
     #
-    # For PlayFramework < 2.2.0:
+    # For Play Framework < 2.2.0:
     #
     # gem 'playframework-capistrano', '0.0.5'
 
@@ -38,7 +38,7 @@ Configure your project ([sample project](https://github.com/tomasmuller/playfram
 
 Run `cap -vT` to see all the available tasks.
 
-#### Deploying your PlayFramework app using PlayFramework/Capistrano Integration Gem:
+#### Steps to deploy your Play application with Play Framework / Capistrano Integration Gem:
 
 `cap deploy:setup` (Prepares one or more servers for deployment.)
 
